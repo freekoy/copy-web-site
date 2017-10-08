@@ -1,0 +1,139 @@
+.navbar {
+  width: 10rem;
+  height: 44px;
+  background: rgba(0,0,0,0.8);
+}
+
+.navbar ul{
+  width: auto;
+}
+
+.navbar li{
+  width: 1.11111111rem;
+  height: 44px;
+  text-align: center;
+  display: inline-block;
+  float: left;
+}
+
+.navbar #items{
+  display: none;
+}
+
+.navbar li:hover{
+  opacity: .65;
+}
+
+.navbar li:active{
+  background: rgba(0,0,0,0.8);
+}
+
+.main {
+  font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+  float: left;
+}
+
+.main .firstrow{
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #f9f0eb;
+  border-bottom: 0.10968921389397rem solid #fff;
+}
+
+.main h2{
+  font-size: 0.51188299817185rem;
+  font-weight: 600;
+  color: black;
+  padding-top: 0.6rem;
+}
+
+.main h3{
+  font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 0.24680073126143rem;
+  font-weight: 400;
+  color: black;
+  margin-top: 0.027422303473492rem;
+}
+
+.main .row{
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #fafafa;
+  border-bottom: 0.10968921389397rem solid #fff;
+}
+
+.row .watch img{
+  width: 1.6636197440585rem;
+  height: 0.6581352833638rem;
+}
+
+.row ul{
+  background: white;
+}
+
+.row li{
+  width: 50%;
+  height: 5.4661791590494rem;
+  border: 6px solid #fff;
+  background-color: #fafafa;
+  box-sizing: border-box;
+  float: left;
+}
+
+.footer {
+  width: 10rem;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  background: black;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+
+@media screen and (max-width: 735px) {
+  .navbar ul{
+    position: absolute;
+  }
+  .navbar li{
+    width: 3.3333333333333rem;
+    height: 44px;
+    background: rgba(0,0,0,0.8);
+    display: none;
+  }
+  .navbar a{
+    display: block;
+  }
+  .navbar #items{
+    width: 3.3333333333333rem;
+    font-size: 0.5rem;
+    line-height: 44px;
+    display: block;
+  }
+  .navbar #items a{
+    color: gray;
+  }
+  .navbar #apple{
+    width: 3.3333333333333rem;
+    display: inline-block;
+  }
+  .navbar #bag{
+    width: 3.3333333333333rem;
+    display: inline-block;
+  }
+  .row li{
+    width: 100%;
+    height: 5.4661791590494rem;
+    border: 0px solid #fff;
+    border-top: 6px solid #fff;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    float: left;
+  }
+  .footer {
+    margin-top: 100px;
+  }
+}

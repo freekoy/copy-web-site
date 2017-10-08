@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./fixsimple.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar">
+    <ul id="ul">
+      <li id="items"><a href="javascript: void(0);" onclick="dis();">=</li></a></li>
+      <li id="apple"><a href=""><img src="./images/apple.svg" alt=""></a></li>
+      <li><a href=""><img src="./images/mac.svg" alt=""></a></li>
+      <li><a href=""><img src="./images/ipad.svg" alt=""></a></li>
+      <li><a href=""><img src="./images/iphone.svg" alt=""></a></li>
+      <li><a href=""><img src="./images/watch.svg" alt=""></a></li>
+      <li><a href=""><img src="./images/music.svg" alt=""></a></li>
+      <li><a href=""><img src="./images/技术支持.svg" alt=""></a></li>
+      <li><a href=""><img src="./images/search.svg" alt=""></a></li>
+      <li id="bag"><a href=""><img src="./images/bag.svg" alt=""></a></li>
+    </ul>
+  </nav>
+  <div class="main">
+    <div class="firstrow">
+      <a href="">
+        <h2>iPhone8</h2>
+        <h3>新一代iPhone</h3>
+        <img src="./images/iphone_8_large.jpg" alt="">
+      </a>
+    </div>
+    <div class="row">
+      <h2>iPhone X</h2>
+      <h3>hello,未来</h3>
+      <img src="./images/iphone_x_medium.jpg" alt="">
+    </div>
+    <div class="row">
+      <h2 class="watch">
+        <img src="./images/watch_series_3_large.svg" alt="">
+      </h2>
+      <h3>更自由,更来电</h3>
+      <img src="./images/watch_medium.jpg" alt="">
+    </div>
+    <div class="row">
+      <ul>
+        <li>
+          <a href="">
+            <h2>iOS 11</h2>
+            <h3>现已推出</h3>
+            <img src="./images/ios_medium.jpg" alt="">
+        </a>
+      </li>
+        <li>
+          <a href="">
+            <h2>watchOS 4</h2>
+            <h3>现已推出</h3>
+            <img src="./images/watchos_medium.jpg" alt="">
+        </a>
+      </li>
+        <li>
+          <a href="">
+            <h2>iPad Pro</h2>
+            <h3>不只能做到,</h3>
+            <h3>还能做到更好</h3>
+            <img src="./images/ipad_pro_large.jpg" alt="">
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <h2>macOS High Sierra</h2>
+            <h3>现已推出</h3>
+            <img src="./images/macos_high_sierra_large.jpg" alt="">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">Copyright © 2017 Apple Inc. 保留所有权利。</div>
+</body>
+<script>
+  let ul = document.getElementById('ul');
+  let val = 1;
+  function dis() {
+    if(val > 0) {
+      //bag li
+      ul.children[ul.children.length-1].style.display = 'none';
+      //items li
+      ul.children[0].children[0].innerHTML = 'x';
+      //mac li
+      ul.children[2].style.marginTop = '44px';
+      //li
+      for(let i = 0;i < ul.children.length;i++) {
+        if(ul.children[i].id != 'items' && ul.children[i].id != 'apple' && ul.children[i].id != 'bag') {
+          ul.children[i].style.width = '10rem';
+          ul.children[i].style.background = 'black';
+          ul.children[i].style.display = 'block';
+          ul.children[i].style.float = 'none';
+        }
+      }
+    }else if(val < 0){
+      //bag li
+      ul.children[ul.children.length-1].style.display = 'inline-block';
+      //items li
+      ul.children[0].children[0].innerHTML = '=';
+      //mac li
+      ul.children[2].style.marginTop = '44px';
+      //li
+      for(let i = 0;i < ul.children.length;i++) {
+        if(ul.children[i].id != 'items' && ul.children[i].id != 'apple' && ul.children[i].id != 'bag') {
+          ul.children[i].style.width = '3.3333333333333rem';
+          ul.children[i].style.display = 'none';
+          ul.children[i].style.float = 'left';
+        }
+      }
+    }
+    val = -val;
+  }
+</script>
+</html>
